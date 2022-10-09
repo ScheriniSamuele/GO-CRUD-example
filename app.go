@@ -11,10 +11,11 @@ func main() {
 
 	r := gin.Default()
 
-	// create and init a "store"
+	// insert some fake data in the global array
 	data.InitProducts()
 
-	routes.SetProductController(r)
+	// use Routes
+	routes.SetProductRoutes(r)
 
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
