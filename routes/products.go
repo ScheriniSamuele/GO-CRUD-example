@@ -10,9 +10,10 @@ import (
 func SetProductController(r *gin.Engine) {
 
 	r.GET("/products", controllers.GetProducts)
+	r.GET("/product/:id", controllers.GetProductById)
 	r.POST("/addProduct", controllers.AddProduct)
-	r.PUT("/updateProduct/{id}", controllers.UpdateProduct)
-	r.DELETE("/deleteProduct/{id}", controllers.DeleteProduct)
+	r.PUT("/updateProduct/:id", controllers.UpdateProduct)
+	r.DELETE("/product/:id", controllers.DeleteProduct)
 
 	r.NoRoute(func(ctx *gin.Context) {
 		helpers.BadRequest(ctx, "No route found")
