@@ -7,13 +7,13 @@ type Product struct {
 	Quantity int     `json:"quantity"`
 }
 
-func InitProducts() []Product {
-	products := make([]Product, 0)
+var Products = make([]Product, 0)
 
-	products = append(products, Product{PID: 1, Name: "apples 🍎", Price: 1.09, Quantity: 4})
-	products = append(products, Product{PID: 2, Name: "peaches 🍑", Price: 1.45, Quantity: 2})
-	products = append(products, Product{PID: 3, Name: "kiwi 🥝", Price: 1.12, Quantity: 0})
-	products = append(products, Product{PID: 4, Name: "grapes 🍇", Price: 0.99, Quantity: 8})
+func InitProducts() {
 
-	return products
+	Products = append(Products, Product{PID: 1, Name: "apples 🍎", Price: 1.09, Quantity: 4})
+	Products = append(Products, Product{PID: 2, Name: "peaches 🍑", Price: 1.45, Quantity: 2})
+	Products = append(Products, Product{PID: 3, Name: "kiwi 🥝", Price: 1.12, Quantity: 0})
+	Products = append(Products, Product{PID: 4, Name: "grapes 🍇", Price: 0.99, Quantity: 8})
+
 }
